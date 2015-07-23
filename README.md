@@ -12,3 +12,8 @@
 * `aws configure` --- configure AWS tool
 * `aws iam upload-server-certificate --server-certificate-name example.com --certificate-body file:///etc/ssl/example.com.crt --private-key file:///etc/ssl/example.com.key --path /cloudfront/example.com/`
 * Make sure `file:///` and `--path /cloudfront/example.com/` like this
+
+## AWS EBS disk resize 
+
+* `sudo resize2fs /dev/xvdr` --- after mount the size need to incrase on EBS volume
+
