@@ -21,10 +21,10 @@ I got issue after a backup disk volume increase size it shows the same size as b
 
 ## Add the SWAP Disk to AWS Ec2 ubuntu 14.04
 
-`sudo dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048` --- create a file with 2 GB size
-`sudo chown root:root /mnt/swapfile` ----give that file to root ownership
-`sudo chmod 600 /mnt/swapfile` --- change permission on the file
-`sudo mkswap /mnt/swapfile` --- make this file to a swapfile system
-`sudo swapon /mnt/swapfile` ---- add to swap
-`/mnt/swapfile swap swap defaults 0 0` --- make a entry in the /etc/fstab
-`swapon -a` --- on the swap
+* `sudo dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048` --- create a file with 2 GB size
+* `sudo chown root:root /mnt/swapfile` ----give that file to root ownership
+* `sudo chmod 600 /mnt/swapfile` --- change permission on the file
+* `sudo mkswap /mnt/swapfile` --- make this file to a swapfile system
+* `sudo swapon /mnt/swapfile` ---- add to swap
+* `/mnt/swapfile swap swap defaults 0 0` --- make a entry in the /etc/fstab
+* `swapon -a` --- on the swap
