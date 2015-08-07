@@ -28,3 +28,8 @@ I got issue after a backup disk volume increase size it shows the same size as b
 * `sudo swapon /mnt/swapfile` ---- add to swap
 * `/mnt/swapfile swap swap defaults 0 0` --- make a entry in the /etc/fstab
 * `swapon -a` --- on the swap
+
+## SSL enable on ubuntu 14.04
+
+* `sudo a2enmod ssl` --- enable mod ssl
+* `sudo a2ensite /etc/apache2/sites-available/default-ssl.conf` --- enable the ssl 
