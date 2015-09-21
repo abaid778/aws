@@ -10,7 +10,7 @@
 * `apt-get install python python-pip` --- install the python and pip
 * `pip install awscli` ---install the awscli tool
 * `aws configure` --- configure AWS tool
-* `aws iam upload-server-certificate --server-certificate-name example.com --certificate-body file:///etc/ssl/example.com.crt --private-key file:///etc/ssl/example.com.key --path /cloudfront/example.com/`
+* `aws iam upload-server-certificate --server-certificate-name example.com --certificate-body file:///etc/ssl/example.com.crt --private-key file:///etc/ssl/example.com.key --certificate-chain file:///etc/ssl/gd_bundle-g2-g1.crt --path /cloudfront/example.com/`
 * Make sure `file:///` and `--path /cloudfront/example.com/` like this
 
 ## AWS EBS disk resize on ubuntu 
