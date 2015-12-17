@@ -19,6 +19,16 @@ I got issue after a backup disk volume increase size it shows the same size as b
 
 * `sudo resize2fs /dev/xvdr` --- after mount the size need to incrase on EBS volume
 
+## version delete issue on the Elasticbeanstalk
+need to configure the aws profile config
+* `mkdir ~/.aws/config`
+* `[profile eb-cli]`
+* `aws_access_key_id = Access key`
+* `aws_secret_access_key = Secert key `
+* `eb labs cleanup-versions --num-to-leave 4`
+reference : http://www.scriptscoop.net/t/04e7078d79be/cannot-deploy-error-you-cannot-have-more-than-500-application-versions.html
+
+
 ## Add the SWAP Disk to AWS Ec2 ubuntu 14.04
 
 * `sudo dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048` --- create a file with 2 GB size
