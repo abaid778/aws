@@ -1,4 +1,33 @@
 # AWS EC2 Linux  various command and tricks 
+## How to mount EBS volume into EC2 Ubuntu 14.04 Instance
+
+1: To verify disk attached or not
+
+`fdisk -l`
+
+Last command shows you the Volume ID and Size like this Disk
+`/dev/xvdf: 10.7 GB, 10737418240 bytes`
+
+2: make the partition 
+
+`fdisk xvdf`
+
+3: Next command would be this for make ext4 partition
+
+sudo mkfs -t ext4 /dev/xvdf1
+
+4: Now create Directory for mounting point
+
+`mkdir /backup`
+
+5: Now mount the new EBS volume to that Directory
+
+`sudo mount /dev/xvdf1 /backup/`
+
+6: Next Step add the to /etc/fstab
+
+`/dev/xvdf1       /backup   ext4    defaults     0       0`
+
 ## Upload SSL certificate to Elastic Load Balancer
 
 * configure AWS tool `aws configure`
