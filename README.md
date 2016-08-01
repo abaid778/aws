@@ -28,6 +28,17 @@ sudo mkfs -t ext4 /dev/xvdf1
 
 `/dev/xvdf1       /backup   ext4    defaults     0       0`
 
+## How to install PhantomJS 2 EC2 Ubuntu 14.04 Instance
+
+1: SSH to the instance
+
+`cd /usr/local/share`
+`sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2`
+`sudo tar xjf phantomjs-2.1.1-linux-x86_64.tar.bz2`
+`sudo ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs`
+`sudo ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs`
+`sudo ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs`
+`phantomjs --version`
 ## Upload SSL certificate to Elastic Load Balancer
 
 * configure AWS tool `aws configure`
