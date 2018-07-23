@@ -134,3 +134,16 @@ reference : http://www.scriptscoop.net/t/04e7078d79be/cannot-deploy-error-you-ca
     ]
 }
 ```
+## S3 copy unencrypted version to encrypted version
+
+This is bash script which I used to encrypted s3 bucket current unencrypted objects 
+
+#!/bin/bash
+time_start=`date +%s`
+
+aws s3 cp s3://BucketName s3://BucketName --recursive --sse AES256
+
+time_end=`date +%s`
+time_exec=`expr $(( $time_end - $time_start ))`
+
+echo "Execution time is $time_exec seconds"
