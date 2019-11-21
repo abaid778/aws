@@ -1,5 +1,5 @@
 # AWS EC2 Linux  various command and tricks 
-## How to mount EBS volume into EC2 Ubuntu 14.04 Instance
+## How to mount EBS volume into EC2 Ubuntu 14.04 Instance and Ubuntu 16.04
 
 1: To verify disk attached or not
 
