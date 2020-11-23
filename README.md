@@ -1,6 +1,14 @@
 # AWS EC2 Linux  various command and tricks 
 ## How to mount EBS volume into EC2 Ubuntu 14.04 Instance and Ubuntu 16.04
 
+## To change the certificate name for a custom domain name
+
+```
+aws apigateway update-domain-name \
+    --domain-name api.domain.tld \
+    --patch-operations op='replace',path='/certificateArn',value='arn:aws:acm:us-west-2:111122223333:certificate/CERTEXAMPLE123EXAMPLE'
+```
+
 1: To verify disk attached or not
 
 `fdisk -l`
