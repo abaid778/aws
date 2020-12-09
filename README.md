@@ -1,6 +1,13 @@
 # AWS EC2 Linux  various command and tricks 
 
-## To change the certificate name for a custom domain name
+## Kill RDS Aurora sleep queries 
+```
+mysql> select concat('CALL mysql.rds_kill( ',id,');') from information_schema.processlist where user='DB_user' and DB='DB_Name';
+mysql> CALL mysql.rds_kill(ProcessID);
+awk -F "|" '{print $1}' mysql.txt
+```
+
+## To change the certificate name for a custom domain name in API Gateway
 
 ```
 aws apigateway update-domain-name \
